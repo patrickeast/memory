@@ -1,9 +1,13 @@
-.navbar .correct {
+.desc-normal {
+	color: #fff;
+}
+
+.desc-correct {
 	-webkit-animation: 1s correct;
 	animation: 1s correct
 }
 
-.navbar .incorrect {
+.desc-incorrect {
 	-webkit-animation: 1s incorrect;
 	animation: 1s incorrect
 }
