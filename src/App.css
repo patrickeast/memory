@@ -257,15 +257,20 @@ header h1 {
 }
 
 @media (max-width:500px) {
+	.container {
+		width: 100%;
+		padding: 0;
+	}
+
 	.card {
-		height: 100px;
-		width: 100px;
+		height: 90px;
+		width: 90px;
 		padding: 2px;
 	}
 
 	.card > .img-container img {
 		width: auto;
-		height: 90px;
+		height: 80px;
 	}
 }
 
