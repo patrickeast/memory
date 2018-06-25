@@ -25,24 +25,25 @@ class App extends Component {
     }
   }
 
+  lose = () => {
+    this.setState({
+      message: "You guessed incorrectly!",
+      topScore: (this.state.currentScore > this.state.topScore) ? this.state.currentScore : this.state.topScore,
+      currentScore: 0,
+      characters: characters,
+      unselectedCharacter: characters
+    });
+  }
+
   selectCharacter = name => {
+    
     const findCharacter = this.state.unselectedCharacter.find(item => item.name === name);
 
     if (findCharacter === undefined) {
       // failure to select a new character
-      this.setState({
-        message: "You guessed incorrectly!",
-        topScore: (this.state.currentScore > this.state.topScore) ? this.state.currentScore : this.state.topScore,
-        currentScore: 0,
-        characters: characters,
-        unselectedCharacter: characters
-      });
+      this.lose();
     }
     else {
-
-      if (this.state.currentScore === 12) {
-        alert("You win!");
-      }
       // success to select a new character
       const newCharacter = this.state.unselectedCharacter.filter(item => item.name !== name);
 
@@ -55,6 +56,12 @@ class App extends Component {
     }
 
     this.shuffleArray(characters);
+
+    if (this.state.currentScore > 10) {
+      var win = document.querySelectorAll(".container");
+      while(win.firstChild) win.removeChild(win.firstChild);
+      alert("You Win!");
+    };
   };
 
   render() {
