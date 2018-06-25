@@ -92,7 +92,7 @@ class App extends Component {
         <footer className="footer">
           <div className="bottom">
             Hey Arnold! Memory Game
-             <img alt="Nickelodeon" src={logo} />
+             <img name="Built with ReactJS" alt="Built with ReactJS" src={logo} />
           </div>
         </footer>
       </div>

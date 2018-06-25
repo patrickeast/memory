@@ -311,10 +311,10 @@ header h1 {
 }
 
 .footer>.bottom>img {
-	width: 30px;
+	width: 40px;
 	position: relative;
-	top: 3px;
-	left: 2px
+	top: 0;
+	left: 10px
 }
 
 * {
