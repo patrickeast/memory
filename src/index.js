@@ -7,7 +7,7 @@ import { Provider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 
 const options = {
-  timeout: 2000,
+  timeout: 3500,
   position: "bottom center"
 };
 
