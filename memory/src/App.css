@@ -1,0 +1,335 @@
+.navbar .correct {
+	-webkit-animation: 1s correct;
+	animation: 1s correct
+}
+
+.navbar .incorrect {
+	-webkit-animation: 1s incorrect;
+	animation: 1s incorrect
+}
+
+@-webkit-keyframes correct {
+	0% {
+		color: #fff
+	}
+	20% {
+		color: #2e7d32
+	}
+	40% {
+		color: #fff
+	}
+	60% {
+		font-weight: #2e7d32
+	}
+	80% {
+		font-weight: #fff
+	}
+	to {
+		font-weight: #2e7d32
+	}
+}
+
+@keyframes correct {
+	0% {
+		color: #fff
+	}
+	20% {
+		color: #2e7d32
+	}
+	40% {
+		color: #fff
+	}
+	60% {
+		font-weight: #2e7d32
+	}
+	80% {
+		font-weight: #fff
+	}
+	to {
+		font-weight: #2e7d32
+	}
+}
+
+@-webkit-keyframes incorrect {
+	0% {
+		color: #fff
+	}
+	20% {
+		color: #c62828
+	}
+	40% {
+		color: #fff
+	}
+	60% {
+		font-weight: #c62828
+	}
+	80% {
+		font-weight: #fff
+	}
+	to {
+		font-weight: #c62828
+	}
+}
+
+@keyframes incorrect {
+	0% {
+		color: #fff
+	}
+	20% {
+		color: #c62828
+	}
+	40% {
+		color: #fff
+	}
+	60% {
+		font-weight: #c62828
+	}
+	80% {
+		font-weight: #fff
+	}
+	to {
+		font-weight: #c62828
+	}
+}
+
+.navbar {
+	background: #fd7e23;
+	min-height: 50px;
+	position: fixed;
+	width: 100%;
+	-webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+	color: #fff;
+	font-size: calc(10px + 14 * (100vw - 320px)/ 800);
+	z-index: 999;
+	white-space: nowrap;
+}
+
+.navbar ul {
+  width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar li {
+	display: inline-block;
+	width: 33.3%;
+	text-align: center
+}
+
+.navbar a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 900
+}
+
+@media (max-width:420px) {
+	.navbar li:first-child {
+		width: 25%
+	}
+	.navbar li:nth-child(2) {
+		width: 35%
+	}
+	.navbar li:last-child {
+		width: 40%
+	}
+}
+
+header {
+	background-image: url("./images/HeyArnoldBg.jpg");
+	background-size: 100%;
+	background-blend-mode: multiply;
+	background-color: #555c9e;
+	background-repeat: no-repeat;
+	color: #fff;
+	min-height: 400px;
+	padding: 250px 20px;
+	padding-bottom: 140px;
+	text-align: center
+}
+
+header h1 {
+	margin: 0;
+	margin-bottom: 30px;
+	font-size: 4rem;
+}
+
+@media (max-width:500px) {
+	header {
+		background-size: 300%;
+		background-repeat: repeat;
+		min-height: 400px;
+		padding: 180px 20px 30px 20px;
+	}
+
+	header h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width:1100px) {
+	header {
+		background-size: 100%;
+		background-repeat: repeat;
+		min-height: 400px;
+		padding: 210px 20px 30px 20px;
+	}
+	header h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width:750px) {
+	header {
+		background-size: 200%;
+		background-repeat: repeat;
+		min-height: 400px;
+		padding: 210px 20px 30px 20px;
+	}
+	header h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+}
+
+
+.container {
+	display: -ms-flexbox;
+	display: flex;
+	min-height: 80%;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 90%;
+	margin: 0 auto
+}
+
+@media (min-width:1100px) {
+	.container {
+		padding-left: 100px;
+		padding-right: 100px;
+		width: 1100px
+	}
+}
+
+.card {
+    background: #fff;
+    border-radius: 2px;
+    height: 170px;
+	width: 170px;
+	padding: 10px;
+    overflow: hidden;
+    margin: 1rem;
+    position: relative;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+}
+
+.card > .img-container {
+	overflow: hidden;
+	text-align: center;
+}
+
+.card > .img-container img {
+    width: auto;
+	height: 140px;
+}
+
+.card:hover {
+	cursor: pointer;
+	animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+@keyframes shake {
+	10%, 90% {
+	  transform: translate3d(-1px, 0, 0);
+	}
+	
+	20%, 80% {
+	  transform: translate3d(2px, 0, 0);
+	}
+  
+	30%, 50%, 70% {
+	  transform: translate3d(-4px, 0, 0);
+	}
+  
+	40%, 60% {
+	  transform: translate3d(4px, 0, 0);
+	}
+  }
+
+.footer {
+	background: #00ff00;
+	height: 50px;
+	position: relative;
+	color: #fff;
+	overflow: auto
+}
+
+.footer>.bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #fd7e23;
+	padding: 8px;
+	color: #fff;
+}
+
+.footer>.bottom>img {
+	width: 30px;
+	position: relative;
+	top: 3px;
+	left: 2px
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: sans-serif
+}
+
+#root,
+#root>div,
+body,
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+
+.App-logo {
+  animation: App-logo-spin infinite 10s linear;
+  height: 80px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1 {
+  font-family: Arnold;
+}
+
+@font-face {
+  font-family: Arnold;
+  src: url("./fonts/ARNORG__.TTF");
+}
