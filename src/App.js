@@ -26,14 +26,14 @@ class App extends Component {
 
   lose = () => {
     this.setState({
-      message: "You guessed incorrectly!",
+      message: "Click an image to begin!",
+      currentScore: 0,
+      characters: characters,
+      unselectedCharacter: characters,
       topScore:
         this.state.currentScore > this.state.topScore
           ? this.state.currentScore
           : this.state.topScore,
-      currentScore: 0,
-      characters: characters,
-      unselectedCharacter: characters
     });
   };
 
@@ -68,14 +68,11 @@ class App extends Component {
       );
       this.props.alert.success("Maaaaaan! You win!");
       this.setState({
-        message: "You guessed correctly!",
-        topScore:
-          this.state.currentScore > this.state.topScore
-            ? this.state.currentScore
-            : this.state.topScore,
+        message: "Click an image to begin!",
+        topScore: 12,
         currentScore: 0,
         characters: characters,
-        unselectedCharacter: newCharacter
+        unselectedCharacter: characters
       });
     }
   };
