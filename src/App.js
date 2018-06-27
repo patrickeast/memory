@@ -69,7 +69,7 @@ class App extends Component {
       this.props.alert.success("Maaaaaan! You win!");
       this.setState({
         message: "Click an image to begin!",
-        topScore: 12,
+        topScore: this.state.currentScore,
         currentScore: 0,
         characters: characters,
         unselectedCharacter: characters
